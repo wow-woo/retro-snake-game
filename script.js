@@ -35,7 +35,6 @@ function draw() {
   // clear drawing board for like actual animation effect
   board.textContent = "";
 
-  console.log(food);
   drawSnake();
   drawFood();
 }
@@ -178,11 +177,11 @@ function increaseSpeed() {
   let speed = gameSpeed;
 
   if (speed >= 150) {
-    console.log((speed -= 5));
+    speed -= 5;
   } else if (speed >= 100) {
-    console.log((speed -= 3));
+    speed -= 3;
   } else if (speed > 50) {
-    console.log((speed -= 2));
+    speed -= 2;
   } else {
     return;
   }
@@ -199,7 +198,7 @@ function resetGame() {
 }
 
 function updateHighScore() {
-  console.log(highScore.textContent);
+  highScore.textContent;
   const currentScore = snake.length - 1;
   if (currentScore > parseInt(highScore.textContent)) {
     highScore.textContent = currentScore.toString().padStart(3, "0");
